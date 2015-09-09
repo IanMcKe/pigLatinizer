@@ -75,12 +75,6 @@ var pigLatinizer = function(message) {
             }
         }
     });
-
-    // result_array.forEach(function(word) {
-    //     if (inArray(word.charAt(0), captial_array)){
-    //         word = word.charAt(0).toUpperCase() + word.slice(1,length);
-    //     }
-    // });
     var end_result = result_array.join(" ");
 
     return end_result;
