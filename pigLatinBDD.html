@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+        <link rel='stylesheet' href="css/styles.css">
         <script src='js/jquery-1.11.3.js'></script>
         <script src='js/scripts.js'></script>
         <title>PigLatinizer</title>
@@ -8,14 +9,37 @@
     <body>
         <div class="container">
             <h1>Pig Latin!</h1>
+            <h4>Enter the phrase you want to translate into pig latin</h4>
+
             <form id="message">
+                <div class='form-group'>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <input id="message" type="text" class="form-control" placeholder="Translate" autofocus>
+                            <span class="input-group-btn">
+                                <button id="pig-button" class="btn btn-default" type="submit"><img src="Pig-100.png" id="piggy" width=20></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+
+
+
+            <!-- <form id="message">
                 <div class="form-group">
-                    <label for="message">Enter the phrase you want to translate into pig latin</label>
+
                     <input type="text" id="message">
                 </div>
 
-                <button type="submit" class="btn btn-success">Translate!</button>
-            </form>
+                <button type="submit" class="btn btn-success"><img src="Pig-100.png" title="Pig" width="50"></button>
+            </form> -->
+
+
 
             <h4><span class="pigLatin"></span></h4>
         </div>

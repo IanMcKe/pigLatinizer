@@ -46,10 +46,14 @@ describe('pigLatinizer', function() {
     });
 
     it('can translate a full sentence', function() {
-        expect(pigLatinizer('iPad pro better than desktop')).to.equal('ipaday opray etterbay anthay esktopday')
+        expect(pigLatinizer('iPad pro better than desktop')).to.equal('iPaday opray etterbay anthay esktopday')
     });
 
     it('leaves the punctuation within words', function() {
-        expect(pigLatinizer('I can\'t think of a sentence!')).to.equal('iay an\'tcay inkthay ofay aay entencesay!')
+        expect(pigLatinizer('i can\'t think of a sentence!')).to.equal('iay an\'tcay inkthay ofay aay entencesay!')
+    });
+
+    it('handles errant characters such as [ or <', function() {
+        expect(pigLatinizer('h<e>]]ll/o h{u}man!')).to.equal('ellohay umanhay!');
     });
 });
