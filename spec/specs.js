@@ -1,3 +1,25 @@
+describe('punctuationChecker', function() {
+    it('removes a single instance of punctuation from inside a word and adds it to the end of the word', function() {
+        expect(punctuationChecker("ello!hay", ["!","?",".",","])).to.equal("ellohay!")
+    });
+
+    it('removes all punctuation from inside a word and adds it to the end of the word', function() {
+        expect(punctuationChecker("ello,!.?hay", ["!","?",".",","])).to.equal("ellohay,!.?")
+    });
+});
+
+
+describe('inArray', function() {
+    it("returns true if something is in an array", function() {
+        expect(inArray("eye", ["eyeing", "eye", "eyer", "eyeeye"])).to.equal(true);
+    });
+
+    it('returns false is something is not in an array', function() {
+        expect(inArray("eye",["nose","ear","eyeeye","mouth"])).to.equal(false);
+    });
+});
+
+
 describe('pigLatinizer', function() {
     it("appends 'ay' to the end of a word starting with a vowel", function() {
         expect(pigLatinizer("eye")).to.equal("eyeay");
@@ -28,6 +50,6 @@ describe('pigLatinizer', function() {
     });
 
     it('leaves the punctuation within words', function() {
-        expect(pigLatinizer('I can\'t think of a sentence!')).to.equal('Iay an\'tcay inkthay ofay aay entencesay!')
+        expect(pigLatinizer('I can\'t think of a sentence!')).to.equal('iay an\'tcay inkthay ofay aay entencesay!')
     });
 });
